@@ -21,7 +21,7 @@ public class StandAloneTest {
 
 		String productName = "ZARA COAT 3";
 
-		//new comments 2
+		//new comments 2, 3
 		// WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
