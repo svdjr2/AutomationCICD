@@ -1,47 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-19T13:09:11 CDT" name="Default suite" finished-at="2025-03-19T13:09:20 CDT" duration-ms="8704">
+  <suite started-at="2025-03-20T01:50:50 CDT" name="Suite" finished-at="2025-03-20T01:51:14 CDT" duration-ms="24746">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@7dc0f706]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
+      <group name="ErrorHandling">
+        <method signature="ErrorValidationsTest.loginErrorValidation()[pri:0, instance:drapercompany.tests.ErrorValidationsTest@895e367]" name="loginErrorValidation" class="drapercompany.tests.ErrorValidationsTest"/>
+      </group> <!-- ErrorHandling -->
+      <group name="Purchase">
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:drapercompany.tests.SubmitOrderTest@16612a51]" name="submitOrder" class="drapercompany.tests.SubmitOrderTest"/>
+      </group> <!-- Purchase -->
     </groups>
-    <test started-at="2025-03-19T13:09:11 CDT" name="Default test" finished-at="2025-03-19T13:09:20 CDT" duration-ms="8704">
-      <class name="cucumber.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGTestRunner@7dc0f706]" started-at="2025-03-19T13:09:11 CDT" name="setUpClass" finished-at="2025-03-19T13:09:12 CDT" duration-ms="400" status="PASS">
+    <test started-at="2025-03-20T01:50:50 CDT" name="Error Validations Test" finished-at="2025-03-20T01:51:05 CDT" duration-ms="15364">
+      <class name="drapercompany.tests.ErrorValidationsTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:drapercompany.tests.ErrorValidationsTest@895e367]" started-at="2025-03-20T01:50:50 CDT" name="launchApplication" finished-at="2025-03-20T01:50:55 CDT" duration-ms="5954" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="loginErrorValidation()[pri:0, instance:drapercompany.tests.ErrorValidationsTest@895e367]" started-at="2025-03-20T01:50:55 CDT" name="loginErrorValidation" finished-at="2025-03-20T01:50:57 CDT" duration-ms="1205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:drapercompany.tests.ErrorValidationsTest@895e367]" started-at="2025-03-20T01:50:57 CDT" name="tearDown" finished-at="2025-03-20T01:50:57 CDT" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:drapercompany.tests.ErrorValidationsTest@895e367]" started-at="2025-03-20T01:50:57 CDT" name="launchApplication" finished-at="2025-03-20T01:51:02 CDT" duration-ms="4777" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="productErrorValidation()[pri:0, instance:drapercompany.tests.ErrorValidationsTest@895e367]" started-at="2025-03-20T01:51:02 CDT" name="productErrorValidation" finished-at="2025-03-20T01:51:04 CDT" duration-ms="2758" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertFalse(Assert.java:79)
+at org.testng.Assert.assertFalse(Assert.java:89)
+at drapercompany.tests.ErrorValidationsTest.productErrorValidation(ErrorValidationsTest.java:49)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:drapercompany.tests.ErrorValidationsTest@895e367]" started-at="2025-03-20T01:51:05 CDT" name="tearDown" finished-at="2025-03-20T01:51:05 CDT" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- drapercompany.tests.ErrorValidationsTest -->
+    </test> <!-- Error Validations Test -->
+    <test started-at="2025-03-20T01:50:50 CDT" name="SubmitOrderTest" finished-at="2025-03-20T01:51:14 CDT" duration-ms="24745">
+      <class name="drapercompany.tests.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:drapercompany.tests.SubmitOrderTest@16612a51]" started-at="2025-03-20T01:50:50 CDT" name="launchApplication" finished-at="2025-03-20T01:50:55 CDT" duration-ms="5813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:drapercompany.tests.SubmitOrderTest@16612a51]" started-at="2025-03-20T01:50:55 CDT" name="submitOrder" data-provider="getData" finished-at="2025-03-20T01:50:59 CDT" duration-ms="3848" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7fcf294e]]>
+                <![CDATA[{password=Abcd!234, product=ZARA COAT 3, email=sdt74201@gmail.com}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@7dc0f706]" started-at="2025-03-19T13:09:12 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-19T13:09:20 CDT" duration-ms="8259" status="PASS">
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:drapercompany.tests.SubmitOrderTest@16612a51]" started-at="2025-03-20T01:50:59 CDT" name="tearDown" finished-at="2025-03-20T01:50:59 CDT" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:drapercompany.tests.SubmitOrderTest@16612a51]" started-at="2025-03-20T01:50:59 CDT" name="launchApplication" finished-at="2025-03-20T01:51:04 CDT" duration-ms="4727" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:drapercompany.tests.SubmitOrderTest@16612a51]" started-at="2025-03-20T01:51:04 CDT" name="submitOrder" data-provider="getData" finished-at="2025-03-20T01:51:08 CDT" duration-ms="4223" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Positive Test of Submitting the order"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Purchase the order from Ecommerce Website"]]>
+                <![CDATA[{password=Iamking@000, product=ADIDAS ORIGINAL, email=anshika@gmail.com}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGTestRunner@7dc0f706]" started-at="2025-03-19T13:09:20 CDT" name="tearDownClass" finished-at="2025-03-19T13:09:20 CDT" duration-ms="14" status="PASS">
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:drapercompany.tests.SubmitOrderTest@16612a51]" started-at="2025-03-20T01:51:08 CDT" name="tearDown" finished-at="2025-03-20T01:51:09 CDT" duration-ms="128" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- cucumber.TestNGTestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:drapercompany.tests.SubmitOrderTest@16612a51]" started-at="2025-03-20T01:51:09 CDT" name="launchApplication" finished-at="2025-03-20T01:51:13 CDT" duration-ms="4744" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="OrderHistoryTest()[pri:0, instance:drapercompany.tests.SubmitOrderTest@16612a51]" started-at="2025-03-20T01:51:13 CDT" name="OrderHistoryTest" finished-at="2025-03-20T01:51:14 CDT" depends-on-methods="drapercompany.tests.SubmitOrderTest.submitOrder" duration-ms="876" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrderHistoryTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:drapercompany.tests.SubmitOrderTest@16612a51]" started-at="2025-03-20T01:51:14 CDT" name="tearDown" finished-at="2025-03-20T01:51:14 CDT" duration-ms="100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- drapercompany.tests.SubmitOrderTest -->
+    </test> <!-- SubmitOrderTest -->
+  </suite> <!-- Suite -->
 </testng-results>

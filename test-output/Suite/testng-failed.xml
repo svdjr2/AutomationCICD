@@ -4,25 +4,12 @@
   <listeners>
     <listener class-name="drapercompany.TestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="SubmitOrderTest(failed)">
-    <classes>
-      <class name="drapercompany.tests.SubmitOrderTest">
-        <methods>
-          <include name="launchApplication"/>
-          <include name="tearDown"/>
-          <include name="submitOrder" invocation-numbers="0 1"/>
-          <include name="OrderHistoryTest"/>
-        </methods>
-      </class> <!-- drapercompany.tests.SubmitOrderTest -->
-    </classes>
-  </test> <!-- SubmitOrderTest(failed) -->
   <test thread-count="5" parallel="tests" name="Error Validations Test(failed)">
     <classes>
       <class name="drapercompany.tests.ErrorValidationsTest">
         <methods>
-          <include name="launchApplication"/>
           <include name="productErrorValidation"/>
-          <include name="loginErrorValidation"/>
+          <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- drapercompany.tests.ErrorValidationsTest -->
